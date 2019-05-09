@@ -19,4 +19,4 @@ The Website has frontend in HTML which is embedding the information from Thingsp
 
 For thingspeak the place where are data will be stored. Create account on https://thingspeak.com and create new channel. Add 7 fields with different weather conditions and pump status. You also need to add widgets and change its src in the HTML code of website.
 
-For ideas/suggesions: Twitter.com/Vimarsh244
+For ideas/suggesions: http://bit.do/Vtwtr
