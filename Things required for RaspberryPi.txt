@@ -1,0 +1,25 @@
+>>>Run all the following installation commands:
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install python3-pip
+sudo apt-get install mosquitto
+
+pip3 install paho-mqtt
+pip3 install bluepy
+pip3 install picamera
+
+bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/master/resources/update-nodejs-and-nodered)
+sudo systemctl enable nodered.service
+
+>>>Add the Raspberry Pi folder to RPI
+
+
+>>>Commands:
+python3 FinalCodeQ.py <ur_device_mac_address>
+mosquitto -d -c mosquittosetting.conf
+
+>>>For Mosquitto Config file in Raspberry Pi folder:
+port 1887
+listener 9004
+protocol websockets

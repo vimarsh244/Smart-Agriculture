@@ -1,0 +1,2150 @@
+[
+    {
+        "id": "3e4aa8c9.d410e8",
+        "type": "tab",
+        "label": "Smart Agriculture - over Internet",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "84093fd.04aedc",
+        "type": "tab",
+        "label": "Smart Agriculture - offline",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "9ec77bf3.554bc8",
+        "type": "tab",
+        "label": "Test",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8889fedd.5e2008",
+        "type": "tab",
+        "label": "Soil Moisture",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "97e2cca3.8c10b",
+        "type": "subflow",
+        "name": "Motor Controller",
+        "info": "Expects different messages\nAn \"On\" message and a \"Direction\" message",
+        "in": [
+            {
+                "x": 25,
+                "y": 219,
+                "wires": [
+                    {
+                        "id": "2e84d221.acb1c6"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1050,
+                "y": 91,
+                "wires": [
+                    {
+                        "id": "5e1abafa.dcd604",
+                        "port": 0
+                    },
+                    {
+                        "id": "fbacca66.de90f",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 1053,
+                "y": 164,
+                "wires": [
+                    {
+                        "id": "5e1abafa.dcd604",
+                        "port": 0
+                    },
+                    {
+                        "id": "d214706e.e9ff28",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 289,
+                "y": 67,
+                "wires": [
+                    {
+                        "id": "2e84d221.acb1c6",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "32fbf2bc.0933ce",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "maqiatto",
+        "broker": "maqiatto.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "64ece23.4005c1c",
+        "type": "twitter-credentials",
+        "z": "",
+        "screen_name": "@spiessa"
+    },
+    {
+        "id": "7bfa9b82.125a0c",
+        "type": "twitter-credentials",
+        "z": "",
+        "screen_name": "@SensorsIOT"
+    },
+    {
+        "id": "15c99299.4283d5",
+        "type": "websocket-listener",
+        "path": "/ws/audio",
+        "wholemsg": "false"
+    },
+    {
+        "id": "6068c4ee.a5eb64",
+        "type": "tls-config",
+        "z": "",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true
+    },
+    {
+        "id": "c68c0ae7.b64628",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "ThingSpeak",
+        "broker": "mqtt.thingspeak.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "e51cf990.3f0e8",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "laptop",
+        "broker": "192.168.0.18",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "9ff6b8da.49c7c",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "LocalHost",
+        "broker": "localhost",
+        "port": "1887",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "a89c24c1.b4721",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "8fab37b7.2caa38",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Smart Agriculture",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2d1fb3dd.fc747c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Weather",
+        "tab": "8fab37b7.2caa38",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9920188b.41f478",
+        "type": "ui_group",
+        "z": "",
+        "name": "Watering",
+        "tab": "8fab37b7.2caa38",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f0f19fbb.68f23",
+        "type": "mqtt in",
+        "z": "3e4aa8c9.d410e8",
+        "name": "Get M Data",
+        "topic": "vimarsh244@gmail.com/mc",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "32fbf2bc.0933ce",
+        "x": 95,
+        "y": 540,
+        "wires": [
+            [
+                "6ceca0cb.46d798",
+                "5f301729.24304"
+            ]
+        ]
+    },
+    {
+        "id": "ff4ed39d.686b6",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "m1",
+        "pin": "29",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 689,
+        "y": 494,
+        "wires": []
+    },
+    {
+        "id": "2e84d221.acb1c6",
+        "type": "switch",
+        "z": "97e2cca3.8c10b",
+        "name": "Split Messages",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Speed",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "On",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Direction",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 3,
+        "x": 165,
+        "y": 228,
+        "wires": [
+            [
+                "f9d33a06.04e96"
+            ],
+            [
+                "5e1abafa.dcd604",
+                "bc972e24.df77e"
+            ],
+            [
+                "1d05f18.78a6c8f"
+            ]
+        ]
+    },
+    {
+        "id": "5e1abafa.dcd604",
+        "type": "switch",
+        "z": "97e2cca3.8c10b",
+        "name": "Off",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 1,
+        "x": 425,
+        "y": 210,
+        "wires": [
+            [
+                "41adcd18.5ea574",
+                "68189c41.c602d4"
+            ]
+        ]
+    },
+    {
+        "id": "41adcd18.5ea574",
+        "type": "debug",
+        "z": "97e2cca3.8c10b",
+        "name": "Motor 1",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 1099,
+        "y": 31.5,
+        "wires": []
+    },
+    {
+        "id": "68189c41.c602d4",
+        "type": "debug",
+        "z": "97e2cca3.8c10b",
+        "name": "Motor 2",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 1095,
+        "y": 226.5,
+        "wires": []
+    },
+    {
+        "id": "bc972e24.df77e",
+        "type": "switch",
+        "z": "97e2cca3.8c10b",
+        "name": "On",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 1,
+        "x": 490,
+        "y": 265,
+        "wires": [
+            [
+                "fbacca66.de90f"
+            ]
+        ]
+    },
+    {
+        "id": "36a29293.321f5e",
+        "type": "change",
+        "z": "97e2cca3.8c10b",
+        "name": "Set Direction Clockwise",
+        "rules": [
+            {
+                "t": "set",
+                "p": "direction",
+                "pt": "flow",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 477,
+        "y": 358,
+        "wires": [
+            [
+                "fbacca66.de90f"
+            ]
+        ]
+    },
+    {
+        "id": "8751a95c.093b58",
+        "type": "change",
+        "z": "97e2cca3.8c10b",
+        "name": "Set Direction Counter Clockwise",
+        "rules": [
+            {
+                "t": "set",
+                "p": "direction",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 417,
+        "wires": [
+            [
+                "fbacca66.de90f"
+            ]
+        ]
+    },
+    {
+        "id": "fbacca66.de90f",
+        "type": "function",
+        "z": "97e2cca3.8c10b",
+        "name": "Get Direction",
+        "func": "var direction = flow.get('direction')||0;\nmsg.payload = direction;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 713,
+        "y": 300,
+        "wires": [
+            [
+                "41adcd18.5ea574",
+                "d214706e.e9ff28"
+            ]
+        ]
+    },
+    {
+        "id": "d214706e.e9ff28",
+        "type": "function",
+        "z": "97e2cca3.8c10b",
+        "name": "Invert",
+        "func": "if (msg.payload == 1) {\n    msg.payload = 0;\n}\nelse\n{\n    msg.payload = 1;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 901,
+        "y": 303,
+        "wires": [
+            [
+                "68189c41.c602d4"
+            ]
+        ]
+    },
+    {
+        "id": "1d05f18.78a6c8f",
+        "type": "switch",
+        "z": "97e2cca3.8c10b",
+        "name": "Direction",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 253,
+        "y": 398,
+        "wires": [
+            [
+                "36a29293.321f5e"
+            ],
+            [
+                "8751a95c.093b58"
+            ]
+        ]
+    },
+    {
+        "id": "f9d33a06.04e96",
+        "type": "debug",
+        "z": "97e2cca3.8c10b",
+        "name": "Motor Speed",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 353,
+        "y": 127.5,
+        "wires": []
+    },
+    {
+        "id": "6ceca0cb.46d798",
+        "type": "switch",
+        "z": "3e4aa8c9.d410e8",
+        "name": "motor thing",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 147,
+        "y": 660,
+        "wires": [
+            [
+                "79bccff4.b22688",
+                "2f8daf35.7a0898"
+            ],
+            [
+                "99332898.4e4f88",
+                "1addc9b4.0c35ee"
+            ],
+            [
+                "e948d32d.4e2d6",
+                "a0ea3f8d.12267"
+            ],
+            [
+                "734115c7.1aae34",
+                "2dfaf661.107daa"
+            ],
+            [
+                "1727ef94.cdbb68",
+                "9df39842.e247"
+            ]
+        ]
+    },
+    {
+        "id": "79bccff4.b22688",
+        "type": "function",
+        "z": "3e4aa8c9.d410e8",
+        "name": "Motor change",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 607,
+        "y": 543,
+        "wires": [
+            [
+                "ba5310f1.91a6a",
+                "9a0f2e74.f7feb8"
+            ]
+        ]
+    },
+    {
+        "id": "9a0f2e74.f7feb8",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "m2",
+        "pin": "31",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 750,
+        "y": 546,
+        "wires": []
+    },
+    {
+        "id": "188733cd.71fb64",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "n1",
+        "pin": "33",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 795,
+        "y": 491,
+        "wires": []
+    },
+    {
+        "id": "ba5310f1.91a6a",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "n2",
+        "pin": "35",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 827,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "2f8daf35.7a0898",
+        "type": "function",
+        "z": "3e4aa8c9.d410e8",
+        "name": "Motor change",
+        "func": "msg.payload = 1;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 545,
+        "y": 504,
+        "wires": [
+            [
+                "ff4ed39d.686b6",
+                "188733cd.71fb64"
+            ]
+        ]
+    },
+    {
+        "id": "edea8518.192b2",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "m1",
+        "pin": "29",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 638,
+        "y": 601,
+        "wires": []
+    },
+    {
+        "id": "1addc9b4.0c35ee",
+        "type": "function",
+        "z": "3e4aa8c9.d410e8",
+        "name": "Motor change",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 458,
+        "y": 649,
+        "wires": [
+            [
+                "d5be00cf.82837",
+                "9a14c145.ddfc1"
+            ]
+        ]
+    },
+    {
+        "id": "9a14c145.ddfc1",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "m2",
+        "pin": "31",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 703,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "d5be00cf.82837",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "n1",
+        "pin": "33",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 816,
+        "y": 637,
+        "wires": []
+    },
+    {
+        "id": "690e7a8.fd22184",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "n2",
+        "pin": "35",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 766,
+        "y": 597,
+        "wires": []
+    },
+    {
+        "id": "99332898.4e4f88",
+        "type": "function",
+        "z": "3e4aa8c9.d410e8",
+        "name": "Motor change",
+        "func": "msg.payload = 1;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 453,
+        "y": 616,
+        "wires": [
+            [
+                "edea8518.192b2",
+                "690e7a8.fd22184"
+            ]
+        ]
+    },
+    {
+        "id": "7ea3f387.80926c",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "m1",
+        "pin": "29",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 673,
+        "y": 690,
+        "wires": []
+    },
+    {
+        "id": "a0ea3f8d.12267",
+        "type": "function",
+        "z": "3e4aa8c9.d410e8",
+        "name": "Motor change",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 591,
+        "y": 739,
+        "wires": [
+            [
+                "4d494c7d.28a374",
+                "5e1459d8.556c7"
+            ]
+        ]
+    },
+    {
+        "id": "5e1459d8.556c7",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "m2",
+        "pin": "31",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 734,
+        "y": 742,
+        "wires": []
+    },
+    {
+        "id": "b7e11c67.de9aa",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "n1",
+        "pin": "33",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 779,
+        "y": 687,
+        "wires": []
+    },
+    {
+        "id": "4d494c7d.28a374",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "n2",
+        "pin": "35",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 811,
+        "y": 736,
+        "wires": []
+    },
+    {
+        "id": "e948d32d.4e2d6",
+        "type": "function",
+        "z": "3e4aa8c9.d410e8",
+        "name": "Motor change",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 694,
+        "wires": [
+            [
+                "7ea3f387.80926c",
+                "b7e11c67.de9aa"
+            ]
+        ]
+    },
+    {
+        "id": "5eb487df.476458",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "m1",
+        "pin": "29",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 628,
+        "y": 928,
+        "wires": []
+    },
+    {
+        "id": "9df39842.e247",
+        "type": "function",
+        "z": "3e4aa8c9.d410e8",
+        "name": "Motor change",
+        "func": "msg.payload = 1;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 546,
+        "y": 977,
+        "wires": [
+            [
+                "85c8ae41.ecf968",
+                "51a66d76.4123ec"
+            ]
+        ]
+    },
+    {
+        "id": "51a66d76.4123ec",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "m2",
+        "pin": "31",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 689,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "92425bc5.cbff68",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "n1",
+        "pin": "33",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 734,
+        "y": 925,
+        "wires": []
+    },
+    {
+        "id": "85c8ae41.ecf968",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "n2",
+        "pin": "35",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 766,
+        "y": 974,
+        "wires": []
+    },
+    {
+        "id": "1727ef94.cdbb68",
+        "type": "function",
+        "z": "3e4aa8c9.d410e8",
+        "name": "Motor change",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 484,
+        "y": 938,
+        "wires": [
+            [
+                "5eb487df.476458",
+                "92425bc5.cbff68"
+            ]
+        ]
+    },
+    {
+        "id": "2f7d70d7.e22e3",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "m1",
+        "pin": "29",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 652,
+        "y": 809,
+        "wires": []
+    },
+    {
+        "id": "2dfaf661.107daa",
+        "type": "function",
+        "z": "3e4aa8c9.d410e8",
+        "name": "Motor change",
+        "func": "msg.payload = 1;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 472,
+        "y": 857,
+        "wires": [
+            [
+                "fafe8465.128e9",
+                "77960e71.9376"
+            ]
+        ]
+    },
+    {
+        "id": "77960e71.9376",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "m2",
+        "pin": "31",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 717,
+        "y": 848,
+        "wires": []
+    },
+    {
+        "id": "fafe8465.128e9",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "n1",
+        "pin": "33",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 830,
+        "y": 845,
+        "wires": []
+    },
+    {
+        "id": "3dbf93b5.4b013c",
+        "type": "rpi-gpio out",
+        "z": "3e4aa8c9.d410e8",
+        "name": "n2",
+        "pin": "35",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 780,
+        "y": 805,
+        "wires": []
+    },
+    {
+        "id": "734115c7.1aae34",
+        "type": "function",
+        "z": "3e4aa8c9.d410e8",
+        "name": "Motor change",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 472,
+        "y": 815,
+        "wires": [
+            [
+                "2f7d70d7.e22e3",
+                "3dbf93b5.4b013c"
+            ]
+        ]
+    },
+    {
+        "id": "5f301729.24304",
+        "type": "debug",
+        "z": "3e4aa8c9.d410e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 344,
+        "y": 510,
+        "wires": []
+    },
+    {
+        "id": "d2381a32.487428",
+        "type": "inject",
+        "z": "9ec77bf3.554bc8",
+        "name": "",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 285.5,
+        "y": 170,
+        "wires": [
+            [
+                "4227ac19.e6d3ac"
+            ]
+        ]
+    },
+    {
+        "id": "4227ac19.e6d3ac",
+        "type": "rpi-gpio out",
+        "z": "9ec77bf3.554bc8",
+        "name": "",
+        "pin": "35",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 473.5,
+        "y": 185,
+        "wires": []
+    },
+    {
+        "id": "daa6d789.4337d",
+        "type": "inject",
+        "z": "9ec77bf3.554bc8",
+        "name": "",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 284,
+        "y": 303,
+        "wires": [
+            [
+                "ab227637.9397f8"
+            ]
+        ]
+    },
+    {
+        "id": "ab227637.9397f8",
+        "type": "rpi-gpio out",
+        "z": "9ec77bf3.554bc8",
+        "name": "",
+        "pin": "35",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 472,
+        "y": 318,
+        "wires": []
+    },
+    {
+        "id": "171c0862.45f388",
+        "type": "mqtt in",
+        "z": "84093fd.04aedc",
+        "name": "Get M Data",
+        "topic": "SA/mc",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9ff6b8da.49c7c",
+        "x": 122.19999694824219,
+        "y": 125.19999694824219,
+        "wires": [
+            [
+                "a840b7be.c3ec4",
+                "3b774317.3e37fc"
+            ]
+        ]
+    },
+    {
+        "id": "510fba5b.240384",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "m1",
+        "pin": "29",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 716.1999969482422,
+        "y": 79.19999694824219,
+        "wires": []
+    },
+    {
+        "id": "a840b7be.c3ec4",
+        "type": "switch",
+        "z": "84093fd.04aedc",
+        "name": "motor thing",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 174.1999969482422,
+        "y": 245.1999969482422,
+        "wires": [
+            [
+                "faed108b.2c634",
+                "6ab9ac1b.205174"
+            ],
+            [
+                "dff4f787.9442",
+                "fa8fd462.eb331"
+            ],
+            [
+                "6947d6df.300958",
+                "2217e3.29d3981e"
+            ],
+            [
+                "8cc2ae35.43d048",
+                "4b13b369.c6574c"
+            ],
+            [
+                "50c7b3a2.99f8e4",
+                "28c5ccb9.cba594"
+            ]
+        ]
+    },
+    {
+        "id": "faed108b.2c634",
+        "type": "function",
+        "z": "84093fd.04aedc",
+        "name": "Motor change",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 634.1999969482422,
+        "y": 128.1999969482422,
+        "wires": [
+            [
+                "a6f59e90.6935",
+                "73964643.8fb8a"
+            ]
+        ]
+    },
+    {
+        "id": "73964643.8fb8a",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "m2",
+        "pin": "31",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 777.1999969482422,
+        "y": 131.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "3f5df614.34721a",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "n1",
+        "pin": "33",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 822.1999969482422,
+        "y": 76.19999694824219,
+        "wires": []
+    },
+    {
+        "id": "a6f59e90.6935",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "n2",
+        "pin": "35",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 854.1999969482422,
+        "y": 125.19999694824219,
+        "wires": []
+    },
+    {
+        "id": "6ab9ac1b.205174",
+        "type": "function",
+        "z": "84093fd.04aedc",
+        "name": "Motor change",
+        "func": "msg.payload = 1;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 572.1999969482422,
+        "y": 89.19999694824219,
+        "wires": [
+            [
+                "510fba5b.240384",
+                "3f5df614.34721a"
+            ]
+        ]
+    },
+    {
+        "id": "7a1e3761.08fee8",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "m1",
+        "pin": "29",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 665.1999969482422,
+        "y": 186.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "fa8fd462.eb331",
+        "type": "function",
+        "z": "84093fd.04aedc",
+        "name": "Motor change",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 485.1999969482422,
+        "y": 234.1999969482422,
+        "wires": [
+            [
+                "34b5846.f8c9c7c",
+                "cfa8f067.dc7da"
+            ]
+        ]
+    },
+    {
+        "id": "cfa8f067.dc7da",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "m2",
+        "pin": "31",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 730.1999969482422,
+        "y": 225.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "34b5846.f8c9c7c",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "n1",
+        "pin": "33",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 843.1999969482422,
+        "y": 222.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "f7f56597.132f68",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "n2",
+        "pin": "35",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 793.1999969482422,
+        "y": 182.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "dff4f787.9442",
+        "type": "function",
+        "z": "84093fd.04aedc",
+        "name": "Motor change",
+        "func": "msg.payload = 1;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 480.1999969482422,
+        "y": 201.1999969482422,
+        "wires": [
+            [
+                "7a1e3761.08fee8",
+                "f7f56597.132f68"
+            ]
+        ]
+    },
+    {
+        "id": "9a190313.2b48e",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "m1",
+        "pin": "29",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 700.1999969482422,
+        "y": 275.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "2217e3.29d3981e",
+        "type": "function",
+        "z": "84093fd.04aedc",
+        "name": "Motor change",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 618.1999969482422,
+        "y": 324.1999969482422,
+        "wires": [
+            [
+                "2472cb83.54786c",
+                "de2e6f8a.589b38"
+            ]
+        ]
+    },
+    {
+        "id": "de2e6f8a.589b38",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "m2",
+        "pin": "31",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 761.1999969482422,
+        "y": 327.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "2c6dd324.426d9c",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "n1",
+        "pin": "33",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 806.1999969482422,
+        "y": 272.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "2472cb83.54786c",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "n2",
+        "pin": "35",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 838.1999969482422,
+        "y": 321.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "6947d6df.300958",
+        "type": "function",
+        "z": "84093fd.04aedc",
+        "name": "Motor change",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 557.1999969482422,
+        "y": 279.1999969482422,
+        "wires": [
+            [
+                "9a190313.2b48e",
+                "2c6dd324.426d9c"
+            ]
+        ]
+    },
+    {
+        "id": "2005f57.9d8b80a",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "m1",
+        "pin": "29",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 655.1999969482422,
+        "y": 513.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "28c5ccb9.cba594",
+        "type": "function",
+        "z": "84093fd.04aedc",
+        "name": "Motor change",
+        "func": "msg.payload = 1;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 573.1999969482422,
+        "y": 562.1999969482422,
+        "wires": [
+            [
+                "b40f9bf1.19e53",
+                "d1d0e727.33f2f"
+            ]
+        ]
+    },
+    {
+        "id": "d1d0e727.33f2f",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "m2",
+        "pin": "31",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 716.1999969482422,
+        "y": 565.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "f2197322.2b4ca8",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "n1",
+        "pin": "33",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 761.1999969482422,
+        "y": 510.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "b40f9bf1.19e53",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "n2",
+        "pin": "35",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 793.1999969482422,
+        "y": 559.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "50c7b3a2.99f8e4",
+        "type": "function",
+        "z": "84093fd.04aedc",
+        "name": "Motor change",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 511.1999969482422,
+        "y": 523.1999969482422,
+        "wires": [
+            [
+                "2005f57.9d8b80a",
+                "f2197322.2b4ca8"
+            ]
+        ]
+    },
+    {
+        "id": "c4e74e9e.d3ba9",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "m1",
+        "pin": "29",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 679.1999969482422,
+        "y": 394.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "4b13b369.c6574c",
+        "type": "function",
+        "z": "84093fd.04aedc",
+        "name": "Motor change",
+        "func": "msg.payload = 1;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 499.1999969482422,
+        "y": 442.1999969482422,
+        "wires": [
+            [
+                "738e13c6.c17cd4",
+                "d70ca876.ad77e8"
+            ]
+        ]
+    },
+    {
+        "id": "d70ca876.ad77e8",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "m2",
+        "pin": "31",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 744.1999969482422,
+        "y": 433.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "738e13c6.c17cd4",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "n1",
+        "pin": "33",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 857.1999969482422,
+        "y": 430.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "e1eea4df.fb4298",
+        "type": "rpi-gpio out",
+        "z": "84093fd.04aedc",
+        "name": "n2",
+        "pin": "35",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 807.1999969482422,
+        "y": 390.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "8cc2ae35.43d048",
+        "type": "function",
+        "z": "84093fd.04aedc",
+        "name": "Motor change",
+        "func": "msg.payload = 0;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 499.1999969482422,
+        "y": 400.1999969482422,
+        "wires": [
+            [
+                "c4e74e9e.d3ba9",
+                "e1eea4df.fb4298"
+            ]
+        ]
+    },
+    {
+        "id": "3b774317.3e37fc",
+        "type": "debug",
+        "z": "84093fd.04aedc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 371.1999969482422,
+        "y": 95.19999694824219,
+        "wires": []
+    },
+    {
+        "id": "c7e0defe.27e42",
+        "type": "mqtt in",
+        "z": "84093fd.04aedc",
+        "name": "",
+        "topic": "MF/temp",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9ff6b8da.49c7c",
+        "x": 199.49998474121094,
+        "y": 625.8000030517578,
+        "wires": [
+            [
+                "4f5a6b2a.f4a07c"
+            ]
+        ]
+    },
+    {
+        "id": "14f93379.676bed",
+        "type": "mqtt in",
+        "z": "84093fd.04aedc",
+        "name": "",
+        "topic": "MF/ap",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9ff6b8da.49c7c",
+        "x": 187.1999969482422,
+        "y": 691.5999755859375,
+        "wires": [
+            [
+                "aae778d5.2d2798"
+            ]
+        ]
+    },
+    {
+        "id": "c7806abc.e4e5f8",
+        "type": "mqtt in",
+        "z": "84093fd.04aedc",
+        "name": "CO2 (ppm)",
+        "topic": "MF/co2",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9ff6b8da.49c7c",
+        "x": 198.1999969482422,
+        "y": 752.5999755859375,
+        "wires": [
+            [
+                "56662268.5d109c"
+            ]
+        ]
+    },
+    {
+        "id": "8605d5c2.19c048",
+        "type": "mqtt in",
+        "z": "84093fd.04aedc",
+        "name": "",
+        "topic": "MF/light",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9ff6b8da.49c7c",
+        "x": 184.1999969482422,
+        "y": 820.5999755859375,
+        "wires": [
+            [
+                "7391ba3c.d25cdc"
+            ]
+        ]
+    },
+    {
+        "id": "60541ff0.3653e8",
+        "type": "mqtt in",
+        "z": "84093fd.04aedc",
+        "name": "VOC (ppb)",
+        "topic": "MF/voc",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9ff6b8da.49c7c",
+        "x": 202.1999969482422,
+        "y": 875.5999755859375,
+        "wires": [
+            [
+                "56662268.5d109c"
+            ]
+        ]
+    },
+    {
+        "id": "ba9b9b23.32d778",
+        "type": "mqtt in",
+        "z": "84093fd.04aedc",
+        "name": "",
+        "topic": "MF/humid",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9ff6b8da.49c7c",
+        "x": 194.1999969482422,
+        "y": 573.5999755859375,
+        "wires": [
+            [
+                "35f7d0e3.413598"
+            ]
+        ]
+    },
+    {
+        "id": "6f3b9149.c66e78",
+        "type": "mqtt out",
+        "z": "84093fd.04aedc",
+        "name": "",
+        "topic": "MF/pump1",
+        "qos": "",
+        "retain": "",
+        "broker": "9ff6b8da.49c7c",
+        "x": 545.4999847412109,
+        "y": 973.9999847412109,
+        "wires": []
+    },
+    {
+        "id": "440848cd.2cae88",
+        "type": "e-mail",
+        "z": "84093fd.04aedc",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "",
+        "dname": "",
+        "x": 180,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "29920820.c53d5",
+        "type": "ui_switch",
+        "z": "84093fd.04aedc",
+        "name": "",
+        "label": "Pump",
+        "tooltip": "Manually control the pump",
+        "group": "9920188b.41f478",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 195.49998474121094,
+        "y": 962.1999969482422,
+        "wires": [
+            [
+                "6f3b9149.c66e78"
+            ]
+        ]
+    },
+    {
+        "id": "4f5a6b2a.f4a07c",
+        "type": "ui_gauge",
+        "z": "84093fd.04aedc",
+        "name": "",
+        "group": "2d1fb3dd.fc747c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 532.4999847412109,
+        "y": 660.5999908447266,
+        "wires": []
+    },
+    {
+        "id": "35f7d0e3.413598",
+        "type": "ui_gauge",
+        "z": "84093fd.04aedc",
+        "name": "",
+        "group": "2d1fb3dd.fc747c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 517.1999969482422,
+        "y": 608.3999633789062,
+        "wires": []
+    },
+    {
+        "id": "7391ba3c.d25cdc",
+        "type": "ui_gauge",
+        "z": "84093fd.04aedc",
+        "name": "",
+        "group": "2d1fb3dd.fc747c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Light",
+        "label": "Lux",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 525.4999847412109,
+        "y": 846.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "aae778d5.2d2798",
+        "type": "ui_chart",
+        "z": "84093fd.04aedc",
+        "name": "",
+        "group": "2d1fb3dd.fc747c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Air Pressure",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "990",
+        "ymax": "1010",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 531.4999847412109,
+        "y": 711.8000030517578,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56662268.5d109c",
+        "type": "ui_chart",
+        "z": "84093fd.04aedc",
+        "name": "",
+        "group": "2d1fb3dd.fc747c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Gas Concentrations",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 541.4999847412109,
+        "y": 784.5999908447266,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10f9f28f.a468c5",
+        "type": "mqtt in",
+        "z": "8889fedd.5e2008",
+        "name": "",
+        "topic": "SA/Soil",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9ff6b8da.49c7c",
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "e4fba6c2.8fd3f"
+            ]
+        ]
+    },
+    {
+        "id": "e4fba6c2.8fd3f",
+        "type": "debug",
+        "z": "8889fedd.5e2008",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 460,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "fad702a0.ddb168",
+        "type": "inject",
+        "z": "8889fedd.5e2008",
+        "name": "",
+        "topic": "",
+        "payload": "500",
+        "payloadType": "num",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "b7c03434.884f98"
+            ]
+        ]
+    },
+    {
+        "id": "b7c03434.884f98",
+        "type": "mqtt out",
+        "z": "8889fedd.5e2008",
+        "name": "",
+        "topic": "SA/Slevel",
+        "qos": "1",
+        "retain": "true",
+        "broker": "9ff6b8da.49c7c",
+        "x": 470,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "6b7277c3.3fe6a8",
+        "type": "mqtt in",
+        "z": "8889fedd.5e2008",
+        "name": "",
+        "topic": "SA/ps",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9ff6b8da.49c7c",
+        "x": 371.49998474121094,
+        "y": 292.8000030517578,
+        "wires": [
+            [
+                "541d3c48.c8462c"
+            ]
+        ]
+    },
+    {
+        "id": "541d3c48.c8462c",
+        "type": "mqtt out",
+        "z": "8889fedd.5e2008",
+        "name": "",
+        "topic": "channels/432689/publish/fields/field7/HH8YDB00AMJ88CNC",
+        "qos": "",
+        "retain": "true",
+        "broker": "c68c0ae7.b64628",
+        "x": 706.5,
+        "y": 454,
+        "wires": []
+    }
+]

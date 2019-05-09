@@ -1,0 +1,55 @@
+<html>
+<title>Smart Agriculture</title>
+
+	
+	 <link rel="icon" href="favicon.png" />
+
+
+<h1 style="text-align: center;"><img src="Logo_transperent.png" ><strong>   	Smart Agriculture</strong></h1>
+
+<h2 style="text-align: right;"><strong>By: Vimarsh<br>India</strong></h2>
+
+
+<script src="jquery.min.js" type="text/javascript"></script>
+<script src="mqttws31.js" type="text/javascript"></script>
+<script src="mqtt.js" type="text/javascript"></script>
+<script src="timeGPS.js" type="text/javascript"></script>
+<script src="nobuttons.js" type="text/javascript"></script>
+
+<p><strong>Sensor Data:</strong></p>
+<br>	<script>
+client.connect(options);
+</script>
+
+<iframe width=300 align="centre" height=250 style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/432689/widgets/61400"></iframe>
+
+<iframe width=300 align="centre" height=250 style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/432689/widgets/61409"></iframe>
+<iframe width=300 align="centre" height=250 style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/432689/widgets/62204"></iframe>
+
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/432689/charts/4?bgcolor=%23ffffff&color=%23d62020&days=3&dynamic=true&title=Light&type=line&yaxis=Lux"></iframe>
+
+<iframe width="300" align="centre" height="250" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/432689/widgets/63218"></iframe>
+
+
+<iframe width="300"  align="centre" height="250" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/432689/widgets/63441"></iframe>
+
+
+
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/432689/widgets/67788"></iframe>
+
+
+<p id="show"></p>
+<p><strong>Robot Control:</strong></p>
+Enter W,A,S,D keys to control the robot...<br>
+W for forward.
+A for Left<br>
+S for Back
+D for right<br>
+X to stop
+<p>&nbsp;</p>
+<br>
+
+<h2	style="text-align: center;">Camera View</h2>
+<iframe src="http://192.168.43.122:8002/index.html" width="640" height="480"></iframe>
+
+</html>
