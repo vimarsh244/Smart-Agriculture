@@ -1,8 +1,8 @@
 # Smart-Agriculture
 Project liscenced under: CC BY-NC-SA
 
-This project's more information: http://bit.do/saWeb
-This repository currently contains code for presentation at MakerFaire Bay Area 2019: http://bit.do/saMF
+This project's more information: http://bit.do/saWeb.
+This repository currently contains code for presentation at MakerFaire Bay Area 2019: http://bit.do/saMF.
 
 The code for Raspberry Pi whixh acts as a local server is in Raspberry Pi folder. You will need to flash an SD card with Raspbian Streatch Lite from Website and connect to local network.
 Though you need to follow steps of some installations in 'Things required for RaspberryPi.txt'
